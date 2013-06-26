@@ -274,46 +274,65 @@ h3.widget-title {
     font-size: 2em;
 }
 
-.widget-area .widget a:hover {
-    color: #DC4B4B;
+.widget-area .widget-title {
+    color: #777;
+    text-shadow: 0 1px #FFF;
 }
 
-.widget h3 {
-    color: #FFF;
-    text-shadow: 0 -1px 2px rgba(0, 0, 0, 0.3);
+.widget-area .widget {
+    background: #F7F7F7; 
+    border: solid 1px #EEE;
+        
 }
     
 .widget-area .widget a {
-    color: #F1F1E6;
+    color: #777;
 }
     
 .widget-area .widget a:hover {
     color: #FFF;
 }
+
+.widget-area .widget li:not(:first-child) {
+    border-top: solid 1px #FFF !important;
+}
     
 .widget-area .widget li:not(:last-child) {
-    border-bottom: solid 1px #004600; /*#8F0000;*/ 
+    border-bottom: solid 1px #CCC; 
 }
     
 .widget li a {
     text-decoration: none;
 }
-
-.widget-area .widget li:not(:first-child) {
-    border-top: solid 1px #C1D52D;
-}
-    
+   
 .widget a {
     color: #F1F1E6;
 }
 
-.widget-footer .widget li:not(:first-child) {
-    border-top: solid 1px #f97878; 
+/*.widget-footer .widget li:not(:first-child) {
+    border-top: solid 1px #AAA; 
 }
 
 .widget-footer .widget li:not(:last-child) {
-    border-bottom: solid 1px #b34242;
+    border-bottom: solid 1px #000;
     
+}*/
+
+.widget-footer .widget li {
+    padding: 0;
+    line-height: 1.3em;
+}
+
+.widget-footer .widget-title {
+    text-transform: none;
+}
+
+.widget-footer .widget-title > span {
+    color: #FE6635;
+}
+
+.widget-footer .widget a:hover {
+    color: #DC4B4B;
 }
     
 /***************************************************************
@@ -332,10 +351,6 @@ footer[role="contentinfo"] {
 footer[role="contentinfo"] a {
     color: #F1F1E6;
     text-decoration: none;
-}
-
-footer[role="contentinfo"] a:hover {
-    color: #FFF;
 }
 
 footer[role="contentinfo"] .footer-top {
@@ -387,20 +402,27 @@ footer[role="contentinfo"] .footer-top {
 
 .site-info > div {
     line-height: 1.3em;
+    
 }
 
-.resto-info {
-    font-family: 'league_gothicregular', Garamond, Tahoma, sans-serif;
-    text-transform: uppercase;
-    font-weight: normal !important;
-    font-size: 1.5em;
+.resto-info > div:first-child {
+    font-weight: bold;
+    font-size: 1.2em;
     line-height: 1.2em;
 }
 
+.resto-info > div:first-child > span {
+    color: #FE6635;
+}
+
 #copyright {
-    text-align: center;
     font-size: 80%;
     padding: 5px;
+    border-top: solid 1px #777;
+}
+
+#copyright a:hover {
+    color: #C1D52D;
 }
 
 /***************************************************************
@@ -526,19 +548,6 @@ a#lightbox-close {
             right: -4px;
         }
         
-    .widget-area .widget {
-        background: #008b00; /* Old browsers */
-        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-        background: -moz-linear-gradient(left,  #008b00 55%, #6ec55a 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, right top, color-stop(55%,#008b00), color-stop(100%,#6ec55a)); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(left,  #008b00 55%,#6ec55a 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(left,  #008b00 55%,#6ec55a 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(left,  #008b00 55%,#6ec55a 100%); /* IE10+ */
-        background: linear-gradient(to right,  #008b00 55%,#6ec55a 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008b00', endColorstr='#6ec55a',GradientType=1 ); /* IE6-8 */
-
-    }
-        
     footer .site-info,
     footer .resto-info, 
     footer .widget-footer {
@@ -548,12 +557,12 @@ a#lightbox-close {
     
     footer .site-info,
     footer .widget-footer {
-        width: 35%;
+        width: 30%;
+        margin-left: 5%;
     }
     
     footer .resto-info {
         width: 30%;
-        font-weight: bold;
     }
     
     footer .resto-info div:first-child {
@@ -562,10 +571,6 @@ a#lightbox-close {
     
     .widget-footer .widget {
         padding-top: 0;
-    }
-    
-    .widget-footer .widget li:not(:last-child) {
-        border-bottom: solid 1px #8F0000; 
     }
     
     .widget-footer .jrl-ym {

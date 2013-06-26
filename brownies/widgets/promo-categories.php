@@ -39,7 +39,9 @@ class jrl_Promo_Categories extends WP_Widget {
         if( !empty($title) ) echo $before_title . $title . $after_title;
         
         $args = array('show_count'=> 1, 'title_li'=> '', 'taxonomy'=> 'kategori-promosi');
+        echo '<ul>';
         wp_list_categories($args);
+        echo '</ul>';
         
         echo $after_widget;
     }

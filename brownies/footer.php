@@ -46,8 +46,10 @@
                 </div><!-- site-wrap -->
             </div><!-- footer-top -->
             <div class="site-wrap">
-                <div class="site-info">
-                    
+                <div class="resto-info">
+                    <div>
+                        <span>Informasi</span>&nbsp; Alamat
+                    </div>
                     <?php
                     if( !empty($jrl_theme_options['address1']) ) {
                         echo '<div>' . $jrl_theme_options['address1'] . '</div>';
@@ -60,43 +62,38 @@
                     if( !empty($jrl_theme_options['address3']) ) {
                         echo '<div>' . $jrl_theme_options['address3'] . '</div>';
                     }
+                    
+                    if( !empty($jrl_theme_options['phone']) ) {
+                        echo '<div> Phone : ' . $jrl_theme_options['phone'] . '</div>';
+                    }
+                    
+                    if( !empty($jrl_theme_options['fax']) ) {
+                        echo '<div> Fax. : ' . $jrl_theme_options['fax'] . '</div>';
+                    }
+                    
+                    if( !empty($jrl_theme_options['bbm']) ) {
+                        echo '<div>Pin BB : ' . $jrl_theme_options['bbm']. '</div>';
+                    }
 
                     ?>
                 </div><!-- site-info 
-                --><div class="resto-info">
-                    <div>
-                        <?php
-                        if ( !empty($jrl_theme_options['delivery']) ) {
-                            echo 'Delivery : ' . $jrl_theme_options['delivery']; 
-                        } ?>
-                    </div>
-                    <div>
-                        <?php
-                        if( !empty($jrl_theme_options['phone']) ) {
-                            echo 'Ph: ' . $jrl_theme_options['phone'];
-                        } ?>
-                    </div>
-                    <div>
-                        <?php
-                        if( !empty($jrl_theme_options['bbm']) ) {
-                            echo 'Pin BB: ' . $jrl_theme_options['bbm'];
-                        } ?>
-                    </div>
+                --><div class="widget-footer">
+                    <?php if( function_exists('dynamic_sidebar') && is_active_sidebar('sidebar-4') ) : 
+                        dynamic_sidebar('sidebar-4'); 
+                    endif; ?>
                 </div><!-- resto-info
                 --><div class="widget-footer">
-                    <?php 
-                    if( function_exists('dynamic_sidebar') && is_active_sidebar('sidebar-4') ) : ?>
-                        <!--<div id="secondary" class="widget-area" role="complementary">-->
-                            <?php dynamic_sidebar('sidebar-4'); ?>
-                        <!--</div>-->
-                    <?php endif; ?>
+                    <?php if( function_exists('dynamic_sidebar') && is_active_sidebar('sidebar-5') ) : 
+                        dynamic_sidebar('sidebar-5'); 
+                    endif; ?>
                 </div><!-- ym -->
+                <div id="copyright">
+                    Copyright &copy;<?php echo date('Y'); ?>
+                    <a href="<?php home_url(); ?>"><?php bloginfo('name'); ?></a>
+                </div>
             </div><!-- site-wrap -->
 
-            <div id="copyright">
-                Copyright &copy;<?php echo date('Y'); ?>
-                <a href="<?php home_url(); ?>"><?php bloginfo('name'); ?></a>
-            </div>
+            
         </footer><!-- #colophon -->
 <?php wp_footer(); ?>
 </body>

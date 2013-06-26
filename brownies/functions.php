@@ -8,9 +8,19 @@
     
     function jrl_footer_sidebar() {
         register_sidebar( array(
-            'name'          => 'Footer Widget Area',
+            'name'          => 'Footer Widget Area Center',
             'id'            => 'sidebar-4',
-            'description'   => 'Digunakan untuk meletakkan widget pada footer sebelah kanan. Disarankan hanya 1 buah widget',
+            'description'   => 'Digunakan untuk meletakkan widget di dalam footer di bagian tengah. Disarankan hanya 1 buah widget',
+            'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</aside>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+	) );
+        
+        register_sidebar( array(
+            'name'          => 'Footer Widget Area Right',
+            'id'            => 'sidebar-5',
+            'description'   => 'Digunakan untuk meletakkan widget di dalam footer di bagian kanan. Disarankan hanya 1 buah widget',
             'before_widget' => '<aside id="%1$s" class="widget %2$s">',
             'after_widget'  => '</aside>',
             'before_title'  => '<h3 class="widget-title">',
@@ -70,6 +80,13 @@
         <meta name="viewport" content="width=device-width" />
     <?php }
     add_action( 'theme_meta', 'jrl_theme_meta' );
+    
+    function jrl_theme_script() {
+        wp_enqueue_script( 'widget-footer-script', 
+                get_stylesheet_directory_uri() . '/js/widgetfooter-title-style.js', 
+                array('jquery') );
+    }
+    add_action( 'wp_head', 'jrl_theme_script' );
     
     /*************************************************************************/
     /************************ Cek Background Size ****************************/
