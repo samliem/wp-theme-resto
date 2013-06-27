@@ -209,12 +209,12 @@
     }
     add_action('after_setup_theme', 'mod_wc_template_add_to_cart');
     
-    function custom_woocommerce_onsale_message($default_message) {
+    /*function custom_woocommerce_onsale_message($default_message) {
         $default_message = '<span class="onsale">'.__( 'Promo', 'woocommerce' ).'</span>';
         return $default_message;
     }
     
-    add_filter('woocommerce_sale_flash', 'custom_woocommerce_onsale_message');
+    add_filter('woocommerce_sale_flash', 'custom_woocommerce_onsale_message');*/
     
     function custom_woocommerce_page_title($page_title) {
         if( is_home() || is_front_page() ) {
@@ -294,6 +294,11 @@
         echo '<div class="short-desc">' . strip_tags($data_product->post_excerpt) . '</div>';
     }
     add_action('woocommerce_after_shop_loop_item_title', 'insert_product_shortdescription', 5);
+    
+    function custom_wc_onsale() {
+        return '<div class="onsale"></div>';
+    }
+    add_filter('woocommerce_sale_flash', 'custom_wc_onsale', 20);
     
     /*------------------------------------------------------
     -------------------- Product Archive -----------------*/
