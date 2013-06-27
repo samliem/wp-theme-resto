@@ -38,32 +38,43 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 <li <?php post_class( $classes ); ?>>
 
 	<?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
+    
+        <div class="product-thumbnail">
 
-        <?php
-            /**
-             * woocommerce_before_shop_loop_item_title hook
-             *
-             * @hooked woocommerce_show_product_loop_sale_flash - 10
-             * @hooked woocommerce_template_loop_product_thumbnail - 10
-             */
-            do_action( 'woocommerce_before_shop_loop_item_title' );
-	?>
-
-        <a href="<?php the_permalink(); ?>">
-                    
-            <h3><?php the_title(); ?></h3>
-                
             <?php
                 /**
-		* woocommerce_after_shop_loop_item_title hook
-		*
-		* @hooked woocommerce_template_loop_price - 10
-		 */
-		do_action( 'woocommerce_after_shop_loop_item_title' );
+                 * woocommerce_before_shop_loop_item_title hook
+                 *
+                 * @hooked woocommerce_show_product_loop_sale_flash - 10
+                 * @hooked woocommerce_template_loop_product_thumbnail - 10
+                 */
+                do_action( 'woocommerce_before_shop_loop_item_title' );
             ?>
 
-	</a>
+            <a href="<?php the_permalink(); ?>">
 
-	<?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
+                <h3><?php the_title(); ?></h3>
+
+                <?php
+                    /**
+                    * woocommerce_after_shop_loop_item_title hook
+                    *
+                    * @hooked woocommerce_template_loop_price - 10
+                     */
+                    //do_action( 'woocommerce_after_shop_loop_item_title' );
+                    do_action( 'custom_woocommerce_product_rating' );
+                ?>
+
+            </a>
+            
+        </div>
+    
+        <div class="product-price">
+    
+            <?php do_action( 'custom_woocommerce_product_price' ); ?>
+            
+        </div>
+	
+        <?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
 
 </li>

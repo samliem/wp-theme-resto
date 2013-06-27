@@ -8,8 +8,8 @@ jQuery(document).ready(function($){
     function arrange_thumbnail() {
         var siteContentWidth = $('.site-content').width();
         
-        //each li.product has border width 5px;
-        var borderWidth = (5/siteContentWidth) * 100;
+        //each li.product has border width 1px;
+        var borderWidth = (1 / siteContentWidth) * 100;
         
         var productColumn = $('#product-column').val();
         var totalBorderWidth = borderWidth * 2 * productColumn;         
@@ -21,6 +21,7 @@ jQuery(document).ready(function($){
             marginRight = 3; //3%
 
         var width = (100-totalBorderWidth-(productColumn-1) * marginRight)/productColumn;
+        //var width = (100-(productColumn-1) * marginRight)/productColumn;
         $('ul.products li.product').each(function(){
             if( !$(this).hasClass('last') ) {
                 $(this).css('margin-right', marginRight + '%');

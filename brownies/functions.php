@@ -306,9 +306,11 @@
     }
     add_action('woocommerce_before_main_content', 'brownies_cek_if_homepage');
     
-    //Mengubah urutan rating agar berada di bawah harga
+    //Memisahkan antara price dan rating yang digunakan dalam template content-product.php
+    remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 );
     remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 5 );
-    add_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_rating', 15 );
+    add_action('custom_woocommerce_product_price', 'woocommerce_template_loop_price');
+    add_action('custom_woocommerce_product_rating', 'woocommerce_template_loop_rating');
     
     function custom_woocommerce_result_count($default_message, $total) {
         if( 1 == $total ) {
