@@ -294,7 +294,7 @@ h3.widget-title {
 }
 
 .widget-area .widget li:not(:first-child) {
-    border-top: solid 1px #FFF !important;
+    border-top: solid 1px #FFF;
 }
     
 .widget-area .widget li:not(:last-child) {
@@ -325,6 +325,7 @@ h3.widget-title {
 
 .widget-footer .widget-title {
     text-transform: none;
+    color: #FFF;
 }
 
 .widget-footer .widget-title > span {
