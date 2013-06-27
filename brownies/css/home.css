@@ -10,14 +10,14 @@
 
 #home-slider .slide-nav {
     position: absolute;
-    top: 40%;
+    top: 50%;
     display: none;
 }
 
 #home-slider .slide-nav a {
     display: block;
-    height: 45px;
-    width: 45px;
+    height: 24px;
+    width: 24px;
 }
 
 #home-slider .right.slide-nav {
@@ -27,7 +27,7 @@
 }
 
 #home-slider .right.slide-nav a {
-    background: url(../images/slider-nav.png) no-repeat 100% 0;
+    background: url(../images/arrows.png) no-repeat 100% 0;
 }
 
 #home-slider .left.slide-nav { 
@@ -36,7 +36,7 @@
 }
 
 #home-slider .left.slide-nav a {
-    background: url(../images/slider-nav.png) no-repeat left top;
+    background: url(../images/arrows.png) no-repeat left top;
 }
 
 ul#slider-list {

@@ -209,12 +209,11 @@
     }
     add_action('after_setup_theme', 'mod_wc_template_add_to_cart');
     
-    /*function custom_woocommerce_onsale_message($default_message) {
-        $default_message = '<span class="onsale">'.__( 'Promo', 'woocommerce' ).'</span>';
-        return $default_message;
+    function mod_woocommerce_breadcumb_delimiter($breadcumb_ops) {
+        $breadcumb_ops['delimiter'] = ' <span class="delimiter">&raquo;</span> ';
+        return $breadcumb_ops;
     }
-    
-    add_filter('woocommerce_sale_flash', 'custom_woocommerce_onsale_message');*/
+    add_filter('woocommerce_breadcrumb_defaults', 'mod_woocommerce_breadcumb_delimiter');
     
     function custom_woocommerce_page_title($page_title) {
         if( is_home() || is_front_page() ) {

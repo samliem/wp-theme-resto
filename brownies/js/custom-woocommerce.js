@@ -8,8 +8,8 @@ jQuery(document).ready(function($){
     function arrange_thumbnail() {
         var siteContentWidth = $('.site-content').width();
         
-        //each li.product has border width 1px;
-        var borderWidth = (1 / siteContentWidth) * 100;
+        //each li.product has border width 3px;
+        var borderWidth = (3 / siteContentWidth) * 100;
         
         var productColumn = $('#product-column').val();
         var totalBorderWidth = borderWidth * 2 * productColumn;         
