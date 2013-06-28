@@ -1,0 +1,149 @@
+﻿#home-slider {
+    position: relative;
+}
+
+#home-slider {
+    /*float: left;*/
+    overflow: hidden;
+}
+
+#home-slider #slide-counter {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+ul#slider-list {
+    position: relative;
+    list-style: none;
+}
+
+li.slide-item {
+    width: 100%;
+    float: left;
+}
+
+li.slide-item a {
+    display: block;
+    position: relative;
+}
+
+#home-slider img {
+    width: 100%;
+}
+
+#home-slider-inner img {
+    box-shadow: 0 0 10px 0 #777, 0 0 0 1px #888;
+}
+
+.slider-info {
+    max-width: 25%;
+    position: absolute;
+    top: 40%;
+    left: 0;
+}
+
+.slide-post-title, .slide-post-excerpt {
+    padding: 5px;
+}
+
+.slide-post-excerpt {
+    margin-top: 10px;
+}
+
+.slide-post-title, .slide-post-excerpt {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.slide-post-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 110%;
+}
+
+.slide-post-excerpt {
+    font-size: 90%;
+}
+
+/*******************************************************
+***************** Slider Navigation *******************/
+
+a.slide-counter {
+    display: inline-block;
+    width: 30px;
+    line-height: 30px;
+}
+
+a.slide-counter {
+    text-align: center;
+    text-decoration: none;
+    background-color: #F1F1E6;
+    color: #44715C;
+    border: solid 1px #B3AA9A;
+    text-shadow: 0 1px #FFF;
+    font-weight: bold;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+
+a.slide-counter:hover,
+a.selected-slide {
+    background-color: #2E231F;
+    color: #F1F1E6;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+}
+
+/*******************************************************
+************ Callout untuk Slide Counter **************/
+
+.callout {
+    position: absolute;
+    width: 200px;
+    margin: 10px 0;
+    padding: 5px 10px;
+    background-color: #F9EECD;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.callout-content {
+    font-size: 0.7em;
+}
+
+.callout .notch {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    border-top: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #F9EECD;
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
+    /* ie6 height fix */
+    font-size: 0;
+    line-height: 0;
+    /* ie6 transparent fix */
+    _border-right-color: pink;
+    _border-left-color: pink;
+    _filter: chroma(color=pink);
+}
+
+.border-callout {
+    border: 1px solid #D37919;
+    padding: 10px 12px;
+}
+
+.border-callout .border-notch {
+    border-bottom-color: #D37919;
+    top: -11px;
+}
+
+#header-border {
+    height: 0;
+}
