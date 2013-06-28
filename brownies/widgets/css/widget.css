@@ -16,7 +16,7 @@ ul.list-promo li {
 ul.list-promo .promo-thumbnail {
     width: 32px;
     position: absolute;
-    top: 0;
+    top: 5px;
     right: 0;
     z-index: 100;
 }
@@ -34,8 +34,6 @@ ul.list-promo li > a {
 
 ul.list-promo li:not(:last-child) {
     padding-bottom: 5px;
-    /*margin-bottom: 5px;*/
-    border-bottom: dotted 1px #EEE;
 }
 
 /**********************************************
