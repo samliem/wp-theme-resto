@@ -92,7 +92,7 @@ h1.entry-title a {
     color: #4F6E05;    
 }
 
-.first-title-word {
+.site-title span {
     color: #000;
 }
 
@@ -201,6 +201,28 @@ a.more-link:active {
 
 /****************************************************************
 *********************** Custom Post Type ***********************/
+
+.promosi.entry-header {
+    padding-left: 10px;
+    background-color: #F7F7F7;
+    border: solid 1px #EEE;
+}
+
+.promosi.entry-header h1.entry-title a {
+    color: #777;
+    text-shadow: 0 1px #FFF;
+}
+
+.promosi.entry-header h1.entry-title a:hover {
+    color: #000;
+}
+
+.promosi.entry-header h1.entry-title:first-letter {
+    font-size: 150%;
+    font-style: italic;
+    font-weight: bold;
+    color: #FE6635;
+}
 
 .promo-thumbnail {
     max-width: 40%;
@@ -595,7 +617,6 @@ a#lightbox-close {
 
 .widget.woocommerce .from,
 .widget.woocommerce del {
-    /*color: #F1F1E6;*/
     color: #ee4e4e;
 }
 
@@ -608,11 +629,16 @@ a#lightbox-close {
     text-shadow: 0 1px #fce690;
 }
 
-.woocommerce .woocommerce-breadcrumb, 
 .woocommerce-page .woocommerce-breadcrumb,
 .woocommerce .woocommerce-breadcrumb a, 
 .woocommerce-page .woocommerce-breadcrumb a{
     color: #DC4B4B !important;
+}
+
+.woocommerce .woocommerce-breadcrumb {
+    padding-left: 10px !important;
+    background-color: #F7F7F7;
+    border: solid 1px #EEE;
 }
 
 .delimiter {
@@ -645,7 +671,7 @@ p.price .amount,
     text-shadow: none;
 }
 
-.entry-title {
+.entry-title.product_title {
     padding-left: 40px;
     color: #777;
     border-bottom: solid 5px #777;
@@ -655,6 +681,7 @@ p.price .amount,
 .woocommerce .posted_in a, .tagged_as a {
     color: #f88f66;
 }
+
 .woocommerce ul.products li.product .onsale,
 .woocommerce div.sale .onsale {
     height: 44px;
@@ -675,6 +702,11 @@ p.price .amount,
     margin-bottom: 10px;
 }
 
+.woocommerce .products.related span.price .from,
+.woocommerce .products.related del {
+    font-size: 80% !important; 
+}
+
 /*-------------------------------------------
 ------------ Product Thumbnail ------------*/
 
@@ -688,7 +720,6 @@ p.price .amount,
     margin: 10px auto 0 !important;
     color: #fdba44;
 }
-
 
 /* -- result count */
 p.woocommerce-result-count:first-letter {
@@ -719,7 +750,10 @@ p.woocommerce-result-count:first-letter {
 .product-thumbnail img {
     border-radius: 0;
     box-shadow: none;
-    
+}
+
+.product-thumbnail {
+    padding: 10px;
 }
 
 .woocommerce ul.products li.product .onsale,

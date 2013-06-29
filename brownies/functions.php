@@ -249,6 +249,11 @@
         return false;
     }
     
+    function jrl_set_empty_price() {
+        return '<div class="empty-price">CALL</div>';
+    }
+    add_action('woocommerce_empty_price_html', 'jrl_set_empty_price');
+    
     /*------------------------------------------------------
     --------------- Product Image Thumbnail ---------------*/
    
@@ -376,6 +381,23 @@
     }
     add_filter('woocommerce_single_product_image_thumbnail_html', 'custom_wc_single_product_thumbnail_html', 10, 4);
     
+    /* Modify woocommerce_related_products -> tidak menggunakan parameter $posts_per_page
+     * agar semua related product (based on category and tag) ditampilkan sekaligus
+     * men-set lebar dari setiap thumbnail sesuai dengan jumlah related product
+     */
+    function woocommerce_related_products( $posts_per_page = 2, $columns = 2, $orderby = 'rand'  ) {
+        global $product;
+        if( $product->get_related() > 2 ) {
+            $columns = 3; ?>
+            <input type="hidden" id="product-column" 
+            value="<?php echo $columns; ?>" />
+        <?php }
+	woocommerce_get_template( 'single-product/related.php', array(
+            'orderby'    => $orderby,
+            'columns'    => $columns
+	) );
+    }
+        
     /*************************************************************************/
     /***************************** Custom Widget *****************************/    
     

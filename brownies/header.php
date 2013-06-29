@@ -58,10 +58,16 @@ endif; ?>
                             if( 'text'== $jrl_theme_options['logo_type'] ) {
                                 $title_words = explode( " ", $jrl_theme_options['site_title'] );
                                 if( count($title_words) > 1 ) {
-                                    echo '<span class="first-title-word">' . $title_words[0] . '</span>';
+                                    //membedakan warna untuk odd and even word
+                                    $new_title = $title_words[0];
                                     for( $i=1; $i < count($title_words); $i++ ) {
-                                        echo '&nbsp;' . $title_words[$i];
+                                        $c = $i + 1;
+                                        if( $c % 2 == 0 )
+                                            $new_title .= "<span>$title_words[$i]</span>";
+                                        else
+                                            $new_title .= $title_words[$i];
                                     }
+                                    echo $new_title;
                                 } else {
                                     echo $title_words;
                                 }
