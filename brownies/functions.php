@@ -297,7 +297,7 @@
         $data_product = $product->get_post_data();
         echo '<div class="short-desc">' . strip_tags($data_product->post_excerpt) . '</div>';
     }
-    add_action('woocommerce_after_shop_loop_item_title', 'insert_product_shortdescription', 5);
+    add_action('custom_woocommerce_after_shop_loop_item_title', 'insert_product_shortdescription', 5);
     
     function custom_wc_onsale() {
         return '<div class="onsale"></div>';

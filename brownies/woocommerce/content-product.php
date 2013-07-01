@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying product content within loops.
+ * Meletakkan product price di bawah thumbnail, terpisah dari animasi
  *
  * Override this template by copying it to yourtheme/woocommerce/content-product.php
  *
@@ -57,11 +57,9 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
 
                 <?php
                     /**
-                    * woocommerce_after_shop_loop_item_title hook
-                    *
-                    * @hooked woocommerce_template_loop_price - 10
+                    * Custom hook
                      */
-                    //do_action( 'woocommerce_after_shop_loop_item_title' );
+                    do_action( 'custom_woocommerce_after_shop_loop_item_title' );
                     do_action( 'custom_woocommerce_product_rating' );
                 ?>
 
@@ -70,10 +68,10 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] )
         </div>
     
         <div class="product-price">
-    
+            <!-- custom hook -->
             <?php do_action( 'custom_woocommerce_product_price' ); ?>
             
-        </div>
+        </div><!-- product-price -->
 	
         <?php do_action( 'woocommerce_after_shop_loop_item' ); ?>
 
