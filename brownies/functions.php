@@ -85,6 +85,9 @@
         wp_enqueue_script( 'widget-footer-script', 
                 get_stylesheet_directory_uri() . '/js/widgetfooter-title-style.js', 
                 array('jquery') );
+        
+        wp_enqueue_style( 'contact-form7-style', 
+                get_stylesheet_directory_uri() . '/css/contact-form7.css' );
     }
     add_action( 'wp_head', 'jrl_theme_script' );
     
