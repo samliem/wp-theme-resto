@@ -600,6 +600,11 @@ a#lightbox-close {
 /***************************************************************
 ********************** Custom WooCommerce *********************/
 
+.woocommerce ul.product_list_widget li img, 
+.woocommerce-page ul.product_list_widget li img {
+    margin-top: 5px;
+}
+
 .woocommerce ul.products {
     display: none;
 }
