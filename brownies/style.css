@@ -202,22 +202,22 @@ a.more-link:active {
 /****************************************************************
 *********************** Custom Post Type ***********************/
 
-.promosi.entry-header {
+.entry-header {
     padding-left: 10px;
     background-color: #F7F7F7;
     border: solid 1px #EEE;
 }
 
-.promosi.entry-header h1.entry-title a {
+.entry-header h1.entry-title a {
     color: #777;
     text-shadow: 0 1px #FFF;
 }
 
-.promosi.entry-header h1.entry-title a:hover {
+.entry-header h1.entry-title a:hover {
     color: #000;
 }
 
-.promosi.entry-header h1.entry-title:first-letter {
+.entry-header h1.entry-title:first-letter {
     font-size: 150%;
     font-style: italic;
     font-weight: bold;

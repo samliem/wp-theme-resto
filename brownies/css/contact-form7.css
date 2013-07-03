@@ -4,9 +4,12 @@
     margin-bottom: 10px;
 } 
 
+.wpcf7-captchac {
+    box-shadow: none !important;
+}
+
 table#contact_form {
     width: 100%;
-    /*background-color: #F1F1F1;*/
     border: solid 1px #FFF;
     border-collapse: collapse;
 }
@@ -20,7 +23,7 @@ table#contact_form tr:first-child {
 }
 
 table#contact_form tr:last-child {
-    border-bottom: solid 1px #FFF;
+    border-bottom: solid 1px #EDEDED;
 }
 
 table#contact_form td.label {
@@ -48,10 +51,6 @@ table#contact_form td {
 table#contact_form td input {
     padding: 2px;
     border: solid 1px #BBB;
-}
-
-table#contact_form td.label:first-child {
-    /*border-top: solid 1px #FFF;*/
 }
 
 table#contact_form .wpcf7-textarea {
