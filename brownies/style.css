@@ -175,6 +175,29 @@ ul.nav-menu {
     
 /***************************************************************
 ***************************** Post ****************************/
+
+.entry-header {
+    padding-left: 10px;
+    background-color: #F7F7F7;
+    border: solid 1px #EEE;
+}
+
+.entry-header h1.entry-title a {
+    color: #777;
+    text-shadow: 0 1px #FFF;
+}
+
+.entry-header h1.entry-title a:hover {
+    color: #000;
+}
+
+.entry-header h1.entry-title:first-letter {
+    font-size: 150%;
+    font-style: italic;
+    font-weight: bold;
+    color: #FE6635;
+}
+
 .more-section {
     display: block;
     margin: 20px 0;
@@ -201,28 +224,6 @@ a.more-link:active {
 
 /****************************************************************
 *********************** Custom Post Type ***********************/
-
-.entry-header {
-    padding-left: 10px;
-    background-color: #F7F7F7;
-    border: solid 1px #EEE;
-}
-
-.entry-header h1.entry-title a {
-    color: #777;
-    text-shadow: 0 1px #FFF;
-}
-
-.entry-header h1.entry-title a:hover {
-    color: #000;
-}
-
-.entry-header h1.entry-title:first-letter {
-    font-size: 150%;
-    font-style: italic;
-    font-weight: bold;
-    color: #FE6635;
-}
 
 .promo-thumbnail {
     max-width: 40%;
