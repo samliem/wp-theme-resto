@@ -619,6 +619,7 @@ a#lightbox-close {
 .widget.woocommerce del .amount {
     color: #DC4B4B !important;
     background: none;
+    font-weight: normal;
 }
 
 .widget.woocommerce .from,
@@ -675,6 +676,7 @@ p.price .amount,
     color: #BBB;
     text-decoration: line-through;
     text-shadow: none;
+    border: none;
 }
 
 .entry-title.product_title {
