@@ -212,7 +212,6 @@ function resto_admin_options_page() {
 		<p><strong>Setting sudah berhasil disimpan</strong></p>
             </div>
         <?php endif; ?>
-        <?php echo $_COOKIE['resto_tab']; ?>
         <ul id="tabs">
             <li <?php if( 'general' == $_COOKIE['resto_tab'] ) echo 'class="tab-active"'; ?>>
                 <a href="#setting-general" id="general-tab">General</a>
