@@ -31,10 +31,19 @@ a:active, a:focus {
     margin: 0 auto;
 }
 
+#back-to-top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    display: none;
+}
+
 /***************************************************************
 ************************* Site Header *************************/
 
-/*-- Added : 24 June 2013 -- */
 #resto_phone {
     line-height: 1.5em;
     background-color: black;
@@ -349,6 +358,22 @@ h3.widget-title {
 .widget-footer .widget a:hover {
     color: #DC4B4B;
 }
+
+.widget-footer .product_list_widget > li .amount {
+    font-size: 90%;
+    color: #FE6635;
+    font-weight: bold;
+}
+
+.widget-footer .product_list_widget > li ins {
+    background: none !important;
+}
+
+.widget-footer .product_list_widget > li del .amount {
+    color: #EEE;
+    font-weight: normal;
+
+}
     
 /***************************************************************
 ********************** Footer & copyright *********************/
@@ -616,8 +641,8 @@ a#lightbox-close {
     display: none!important;    /* Khusus untuk simple theme category */
 }
 
-.widget.woocommerce del .amount {
-    color: #DC4B4B !important;
+.widget-area .widget.woocommerce del .amount {
+    color: #DC4B4B;
     background: none;
     font-weight: normal;
 }
@@ -627,8 +652,8 @@ a#lightbox-close {
     color: #ee4e4e;
 }
 
-.product_list_widget > li .amount,
-.widget.woocommerce ins .amount {
+.widget-area .product_list_widget > li .amount,
+.widget-area .widget.woocommerce ins .amount {
     padding: 5px;
     color: #777;
     font-weight: bold;

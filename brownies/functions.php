@@ -43,6 +43,14 @@
     <?php } 
     add_action('jrl_before_header', 'jrl_insert_mask');
     
+    //Back to Top Link
+    function jrl_back_to_top() { ?>
+        <a id="back-to-top" href="" title="back to top">
+            <img src="<?php echo get_stylesheet_directory_uri() . '/images/arrow-top.png'; ?>" />
+        </a>
+    <?php } 
+    add_action('jrl_before_header', 'jrl_back_to_top');
+    
     //Change default width
     function custom_twentytwelve_content_width() {
 	if ( is_page_template( 'page-templates/full-width.php' ) || is_attachment() || ! is_active_sidebar( 'sidebar-1' ) ) {
@@ -84,6 +92,10 @@
     function jrl_theme_script() {
         wp_enqueue_script( 'widget-footer-script', 
                 get_stylesheet_directory_uri() . '/js/widgetfooter-title-style.js', 
+                array('jquery') );
+        
+        wp_enqueue_script( 'main',
+                get_stylesheet_directory_uri() . '/js/main.js',
                 array('jquery') );
         
         wp_enqueue_style( 'contact-form7-style', 
@@ -176,7 +188,7 @@
     
     /*************************************************************************/
     /********************************* Header ********************************/ 
-    //-- Added : 24 June 2013
+
     function brownies_html_before_header() {
         global $jrl_theme_options; 
         echo '<div id="resto_phone"><div class="site-wrap">';
