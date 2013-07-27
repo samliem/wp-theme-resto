@@ -84,7 +84,7 @@ endif; ?>
 	</header><!-- #masthead -->
         </div><!-- .site-wrap -->
         
-            <?php if( is_home() || is_front_page() ) : 
+            <?php if( is_front_page() ) : 
                 add_filter('woocommerce_show_page_title', 'hide_wc_page_title');
                 get_template_part('home', 'slider'); ?>
             <?php endif; ?>
