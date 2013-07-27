@@ -39,7 +39,7 @@
                     <?php
                         global $jrl_theme_options;
                         $post_content = $jrl_theme_options['post_content'];
-                        if( is_archive() || is_category() ) {
+                        if( is_archive() || is_category() || is_home() ) {
                             if( 'excerpt' == $post_content ) {
                                 $more_tag_post = strpos(get_the_content(), '(more...)');
                                 if( false === $more_tag_post ) {

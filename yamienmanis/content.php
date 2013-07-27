@@ -39,15 +39,19 @@
                     <?php
                         global $jrl_theme_options;
                         $post_content = $jrl_theme_options['post_content'];
-                        if( 'excerpt' == $post_content ) {
-                            $more_tag_post = strpos(get_the_content(), '(more...)');
-                            if( false === $more_tag_post ) {
-                                $more = '<div class="more-section"><a class="more-link" href="' . get_permalink(get_the_ID()) . '">
-                                Read more &rarr;</a></div>';
-                                echo wp_trim_words(get_the_content(), 40, $more);
+                        if( is_archive() || is_category() || is_home() ) {
+                            if( 'excerpt' == $post_content ) {
+                                $more_tag_post = strpos(get_the_content(), '(more...)');
+                                if( false === $more_tag_post ) {
+                                    $more = '<div class="more-section"><a class="more-link" href="' . get_permalink(get_the_ID()) . '">
+                                    Read more &rarr;</a></div>';
+                                    echo wp_trim_words(get_the_content(), 40, $more);
+                                } else {
+                                    the_content( __( '<div class="more-section">Read more <span class="meta-nav">&rarr;</span></div>', 'twentytwelve' ) ); 
+                                } 
                             } else {
-                                the_content( __( '<div class="more-section">Read more <span class="meta-nav">&rarr;</span></div>', 'twentytwelve' ) ); 
-                            } 
+                                the_content();
+                            }
                         } else {
                             the_content();
                         }
